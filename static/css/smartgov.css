@@ -14,3 +14,13 @@
     font-weight: 400;
     font-size: 20px;
 }
+.module h2, .module caption, .inline-group h2 {
+    background: steelblue;
+}
+.module caption{
+    border-bottom: 1px solid #eaeaea;
+}
+
+div.breadcrumbs{
+    background: steelblue;
+}
