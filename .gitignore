@@ -1,3 +1,5 @@
 *.sqlite3
 *.sqlite3-journal
 project/local_settings.py
+__pycache__
+*.pyc
