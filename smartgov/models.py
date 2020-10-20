@@ -43,19 +43,28 @@ class EntryDataset(models.Model):
     class Meta:
         verbose_name = 'Calculation'
         verbose_name_plural = 'Calculations'
-        
+
 class InputData(models.Model):
     entry = models.ForeignKey(EntryDataset,on_delete=models.CASCADE,default=None,null=True)
     parameter = models.ForeignKey(Input,on_delete=models.CASCADE)
-    value = models.DecimalField(default=0,max_digits=5, decimal_places=2)
+    value = models.DecimalField('Value (%)',default=0,max_digits=5, decimal_places=2)
+    class Meta:
+        verbose_name = 'Input Data'
+        verbose_name_plural = 'Input Data'
 class OutputData(models.Model):
     entry = models.ForeignKey(EntryDataset,on_delete=models.CASCADE,default=None,null=True)
     parameter = models.ForeignKey(Output,on_delete=models.CASCADE)
-    value = models.DecimalField(default=0,max_digits=5, decimal_places=2)
+    value = models.DecimalField('Value (%)',default=0,max_digits=5, decimal_places=2)
+    class Meta:
+        verbose_name = 'Output Data'
+        verbose_name_plural = 'Output Data'
 class OutcomeData(models.Model):
     entry = models.ForeignKey(EntryDataset,on_delete=models.CASCADE,default=None,null=True)
     parameter = models.ForeignKey(Outcome,on_delete=models.CASCADE)
-    value = models.DecimalField(default=0,max_digits=5, decimal_places=2)
+    value = models.DecimalField('Value (%)',default=0,max_digits=5, decimal_places=2)
+    class Meta:
+        verbose_name = 'Outcome Data'
+        verbose_name_plural = 'Outcome Data'
 
 
 class Dataset(models.Model):
