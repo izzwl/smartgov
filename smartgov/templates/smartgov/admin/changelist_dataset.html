@@ -1,0 +1,10 @@
+{% extends 'admin/change_list.html' %}
+
+{% block object-tools-items %}
+{{ block.super }}
+<li>
+<a href="/admin/smartgov/entrydataset/add/" class="addlink">
+    New Calculation
+</a>
+</li>
+{% endblock %}
