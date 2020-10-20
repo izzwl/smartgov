@@ -27,8 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
+    'prod.umcntp.co.id',
     'smartgov.umcntp.co.id',
     'smartgov.prod.umcntp.co.id',
+    'smartgov.coba.umcntp.co.id',
     'smartgov.coba.umcntp.co.id',
 ]
 
