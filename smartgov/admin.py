@@ -100,4 +100,6 @@ admin.site.get_app_list = types.MethodType(
 admin.site.app_index = types.MethodType(
     app_index,admin.site
 )
-admin.site.site_header = 'SMART GOVERNANCE'
+admin.site.site_header = 'SMART GOVERNANCE '
+admin.site.site_title = 'SMART GOVERNANCE'
+admin.site.index_title = ' '
