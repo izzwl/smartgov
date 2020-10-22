@@ -1,0 +1,6 @@
+Django==2.2.16
+django-static-jquery-ui==1.12.1.1
+django-static-jquery3==5.1.0
+django-tabbed-changeform-admin==0.1.6
+pytz==2020.1
+sqlparse==0.4.1
