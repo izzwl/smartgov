@@ -1,4 +1,4 @@
-{% extends "admin/base_site.html" %}
+{% extends "admin/base_asli.html" %}
 {% load i18n static %}
 
 {% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/login.css" %}">
@@ -7,6 +7,7 @@
 
 {% block bodyclass %}{{ block.super }} login{% endblock %}
 
+{% block sidebarbs %}{% endblock %}
 {% block usertools %}{% endblock %}
 
 {% block nav-global %}{% endblock %}
@@ -14,7 +15,11 @@
 {% block content_title %}{% endblock %}
 
 {% block breadcrumbs %}{% endblock %}
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
 {% block content %}
 {% if form.errors and not form.non_field_errors %}
 <p class="errornote">

@@ -1,12 +1,21 @@
 {% extends 'admin/change_form.html' %}
 
+{% block inline_field_sets %}
+    {% for inline_admin_formset in inline_admin_formsets %}
+    {% include inline_admin_formsets.0.opts.template %}
+    {% if inline_admin_formset.formset.prefix == 'outcomedata_set' %}
+    <input type="submit" value='Generate' name="_continue"/> &nbsp;
+    <br/>
+    <br/>
+    {%endif%}
+    {%endfor%}
+{% endblock %}
+
 {% block submit_buttons_bottom %}
-    <div class='submit-row'>
-        <input type="submit" value='Submit' name="_continue"/> &nbsp;
+        {% comment %} <input type="submit" value='Generate' name="_continue"/> &nbsp; {% endcomment %}
         {% if object_id %}
-            <a href="#" class='button default' style="padding: 9.2px 13px;margin-top:0px;width:auto;">Save</a>
+            <a href="#" class='button default' style="padding:9.2px 13px;margin-top:0px;width:auto;float:left;">Save</a>
         {% else %}
-            <a href="#" class='button default' disabled onclick='return false' style="padding: 9.2px 13px;margin-top:0px;width:auto;">Save</a>
+            <a href="#" class='button default' disabled onclick='return false' style="padding: 9.2px 13px;margin-top:0px;width:auto;float:left;">Save</a>
         {% endif %}
-    </div>
 {% endblock %}

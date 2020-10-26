@@ -41,8 +41,8 @@ class Metode(models.Model):
 class EntryDataset(models.Model):
     metode = models.ForeignKey(Metode,on_delete=models.CASCADE)
     class Meta:
-        verbose_name = 'Calculation'
-        verbose_name_plural = 'Calculations'
+        verbose_name = 'Recommendation'
+        verbose_name_plural = 'Recommendations'
 
 class InputData(models.Model):
     entry = models.ForeignKey(EntryDataset,on_delete=models.CASCADE,default=None,null=True)
@@ -69,6 +69,7 @@ class OutcomeData(models.Model):
 
 class Dataset(models.Model):
     metode = models.ForeignKey(Metode,on_delete=models.CASCADE,null=True,default=None)
+    timestamp = models.DateTimeField(auto_now_add=True)
     input_ref = models.ForeignKey(Input,on_delete=models.CASCADE,null=True,default=None)
     input_data = models.DecimalField(default=0,max_digits=5, decimal_places=2)
     output_ref = models.ForeignKey(Output,on_delete=models.CASCADE,null=True,default=None)

@@ -102,4 +102,4 @@ admin.site.app_index = types.MethodType(
 )
 admin.site.site_header = 'SMART GOVERNANCE '
 admin.site.site_title = 'SMART GOVERNANCE'
-admin.site.index_title = ' '
+admin.site.index_title = 'Home'
