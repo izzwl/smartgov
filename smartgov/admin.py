@@ -40,9 +40,11 @@ class MasterAdmin(admin.ModelAdmin):
         return [field.name for field in self.model._meta.fields if field.name != "id"]
 class DatasetAdmin(DjangoTabbedChangeformAdmin,admin.ModelAdmin):
     change_list_template = 'smartgov/admin/changelist_dataset.html'
-
-    def get_list_display(self,request):
-        return [field.name for field in self.model._meta.fields if field.name != "id"]
+    
+    list_display = [
+        'timestamp','input_ref','input_data','output_ref','output_data','outcome_ref','outcome_data',    
+    ]
+   
     def has_add_permission(self,request):
         return False
     def has_change_permission(self,request,obj=None):
