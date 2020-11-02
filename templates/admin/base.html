@@ -83,9 +83,26 @@
     {% endblock messages %}
 
     <!-- Content -->
+    <nav class="mobile-nav navbar navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
+        <ul class="navbar-nav nav-justified w-100">
+        <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
+            <div class="sidebarbs-mobile dropdown-menu text-center">
+                <a class="dropdown-item" href="{% url 'admin:index' %}">Home</a>
+                <a class="dropdown-item item-header disabled" href="#">Setup</a>
+                <a class="dropdown-item sub-item" href="{% url 'admin:smartgov_input_changelist' %}">Input</a>
+                <a class="dropdown-item sub-item" href="{% url 'admin:smartgov_output_changelist' %}">Output</a>
+                <a class="dropdown-item sub-item" href="{% url 'admin:smartgov_outcome_changelist' %}">Outcome</a>
+                <a class="dropdown-item" href="{% url 'admin:smartgov_dataset_changelist' %}">Dataset</a>
+                <a class="dropdown-item" href="{% url 'admin:smartgov_entrydataset_add' %}">Recommendation</a>
+            </div>
+        </li>
+        </ul>
+    </nav>
     <div class="container-fluid" >
       <div class="row">
       {% block sidebarbs %}
+        
         <nav class="col-md-2 d-none d-md-block bg-light sidebar" style='padding-top:50px;'>
             <div class="sidebar-sticky">
             <ul class="nav flex-column">
@@ -98,9 +115,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Setup</a>
                     <div class="sidebarbs dropdown-menu">
-                    <a class="dropdown-item" href="{% url 'admin:smartgov_input_changelist' %}">Input</a>
-                    <a class="dropdown-item" href="{% url 'admin:smartgov_output_changelist' %}">Output</a>
-                    <a class="dropdown-item" href="{% url 'admin:smartgov_outcome_changelist' %}">Outcome</a>
+                        <a class="dropdown-item" href="{% url 'admin:smartgov_input_changelist' %}">Input</a>
+                        <a class="dropdown-item" href="{% url 'admin:smartgov_output_changelist' %}">Output</a>
+                        <a class="dropdown-item" href="{% url 'admin:smartgov_outcome_changelist' %}">Outcome</a>
                     </div>
                 </li>
                 <li class="nav-item">

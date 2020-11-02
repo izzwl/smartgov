@@ -49,3 +49,48 @@ table .form-row {
 .form-row{
     display:inherit!important;
 }
+li.nav-item{
+    list-style-type: none!important;
+}
+.sidebarbs-mobile.dropdown-menu.show{
+    /* position: inherit!important; */
+    transform:unset!important ;
+    width: 100%!important;
+    border:none;
+    background-color: whitesmoke;
+    font-size: 1rem;
+    /* text-transform: uppercase; */
+    bottom: 120%!important;
+    width: 100vw !important;
+    margin: 0;
+    padding: 0;
+    margin-left: -15px;
+    color:whitesmoke;
+    border-top: 1px solid #eaeaea;
+    z-index: 9999999!important;
+
+}
+.sidebarbs-mobile.dropdown-menu.show .dropdown-item{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    color:black
+}
+.sidebarbs-mobile.dropdown-menu.show .sub-item{
+    font-size: .7rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.sidebarbs-mobile.dropdown-menu.show .item-header{
+    margin-bottom: 0;
+
+}
+.mobile-nav{
+    background-color: #f8f9fa;
+}
+.mobile-nav a.dropdown-toggle{
+    color:black;
+    /* text-transform: uppercase; */
+}
+.mobile-nav a.dropdown-toggle:hover{
+    color: black;
+}
